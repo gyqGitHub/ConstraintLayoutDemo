@@ -14,5 +14,7 @@ class MainActivity : AppCompatActivity() {
         btn_layer.setOnClickListener { LayerActivity.start(this) }
 
         btn_custom_helper.setOnClickListener { ConstraintHelperActivity.start(this) }
+
+        btn_image_filter.setOnClickListener { ImageFilterActivity.start(this) }
     }
 }
