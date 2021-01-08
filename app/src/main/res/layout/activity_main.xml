@@ -17,7 +17,7 @@
         app:flow_horizontalGap="30dp"
         app:flow_verticalGap="30dp"
         app:flow_maxElementsWrap="1"
-        app:constraint_referenced_ids="btn_layout,btn_flow,btn_layer,btn_motion"
+        app:constraint_referenced_ids="btn_layout,btn_flow,btn_layer,btn_custom_helper,btn_motion"
         android:layout_height="wrap_content">
     </androidx.constraintlayout.helper.widget.Flow>
 
@@ -47,6 +47,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Layer"
+        ></Button>
+
+    <Button
+        android:id="@+id/btn_custom_helper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CustomHelper"
         ></Button>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

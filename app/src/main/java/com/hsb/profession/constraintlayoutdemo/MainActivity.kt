@@ -12,5 +12,7 @@ class MainActivity : AppCompatActivity() {
         btn_flow.setOnClickListener { FlowActivity.start(this) }
 
         btn_layer.setOnClickListener { LayerActivity.start(this) }
+
+        btn_custom_helper.setOnClickListener { ConstraintHelperActivity.start(this) }
     }
 }
