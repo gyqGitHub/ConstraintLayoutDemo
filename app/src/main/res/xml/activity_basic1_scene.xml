@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    app:defaultDuration="1000"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        app:constraintSetEnd="@layout/activity_basic1_scene_end"
+        app:duration="100"
+        app:constraintSetStart="@layout/activity_basic1_scene_start">
+
+<!--        <OnSwipe app:touchAnchorId="@+id/img_head" app:dragDirection="dragDown" ></OnSwipe>-->
+
+        <OnClick
+            app:clickAction="toggle"
+            app:targetId="@+id/img_head" />
+
+    </Transition>
+</MotionScene>
