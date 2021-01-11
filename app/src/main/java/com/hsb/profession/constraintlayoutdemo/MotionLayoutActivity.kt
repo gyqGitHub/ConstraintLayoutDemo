@@ -25,5 +25,7 @@ class MotionLayoutActivity : AppCompatActivity() {
         btn_basic_2.setOnClickListener { MotionBasic2Activity.start(this) }
 
         btn_custom_attribute.setOnClickListener { MotionCustomAttributeActivity.start(this) }
+
+        btn_keyframe_position.setOnClickListener { MotionKeyFrame1Activity.start(this) }
     }
 }

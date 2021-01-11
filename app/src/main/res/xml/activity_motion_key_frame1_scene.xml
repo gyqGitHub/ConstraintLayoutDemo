@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    app:defaultDuration="3000"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint android:id="@+id/tv_name" >
+            <Layout
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <!--注意要是textView的set方法后面的那个字符串，如应该是backgroundColor而不是background-->
+            <CustomAttribute
+                app:attributeName="backgroundColor"
+                app:customColorValue="@color/colorAccent" />
+        </Constraint>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint android:id="@+id/tv_name" >
+            <Layout
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginBottom="100dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <CustomAttribute
+                app:attributeName="backgroundColor"
+                app:customColorValue="@color/colorPrimaryDark" />
+        </Constraint>
+    </ConstraintSet>
+
+    <Transition
+        app:constraintSetEnd="@id/end"
+        app:constraintSetStart="@+id/start">
+        <OnSwipe
+            app:touchRegionId="@id/tv_name"
+            app:touchAnchorId="@id/tv_name"
+            app:dragDirection="dragRight"
+            app:touchAnchorSide="right" />
+
+        <KeyFrameSet>
+            <KeyPosition
+                app:curveFit="spline"
+                app:motionTarget="@+id/tv_name"
+                app:keyPositionType="deltaRelative"
+                app:percentY="0.8"
+                app:percentWidth="0.5"
+                app:percentHeight="0.5"
+                app:transitionEasing="standard"
+                app:framePosition="50"
+                app:sizePercent="2" />
+        </KeyFrameSet>
+    </Transition>
+</MotionScene>
