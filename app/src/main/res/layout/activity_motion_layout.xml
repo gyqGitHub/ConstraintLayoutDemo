@@ -15,7 +15,7 @@
             android:layout_width="match_parent"
             app:flow_maxElementsWrap="1"
             app:flow_wrapMode="chain"
-            app:constraint_referenced_ids="btn_basic_1,btn_basic_2"
+            app:constraint_referenced_ids="btn_basic_1,btn_basic_2,btn_custom_attribute"
             android:layout_height="match_parent" />
 
         <Button
@@ -30,6 +30,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="基本使用之-单布局"
+            />
+
+        <Button
+            android:id="@+id/btn_custom_attribute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="自定义属性"
             />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

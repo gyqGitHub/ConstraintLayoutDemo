@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint android:id="@+id/tv_name" >
+            <!--如果宽高设置为wrap_content会有问题-->
+            <Layout
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <CustomAttribute
+                app:attributeName="textSize"
+                app:customDimension="16dp" />
+
+            <CustomAttribute
+                app:attributeName="textColor"
+                app:customColorValue="@color/colorAccent" />
+        </Constraint>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint android:id="@id/tv_name" >
+            <Layout
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+            <!--使用其他非layout属性-->
+            <CustomAttribute
+                app:attributeName="textSize"
+                app:customDimension="36dp" />
+
+            <CustomAttribute
+                app:attributeName="textColor"
+                app:customColorValue="@color/colorPrimaryDark" />
+        </Constraint>
+
+    </ConstraintSet>
+
+    <Transition
+        app:constraintSetEnd="@id/end"
+        app:constraintSetStart="@+id/start" >
+        <!--touchRegionId触摸事件的区域，不过不设置默认是父布局的区域-->
+        <OnSwipe
+            app:dragDirection="dragDown"
+            app:touchRegionId="@id/tv_name"
+            app:touchAnchorId="@id/tv_name" />
+    </Transition>
+</MotionScene>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MotionCustomAttributeActivity"
+    app:showPaths="true"
+    app:layoutDescription="@xml/activity_motion_custom_attribute_scene">
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="gyq"
+        android:textSize="12dp"
+        android:gravity="center"
+        android:textColor="@color/colorAccent"
+        />
+
+</androidx.constraintlayout.motion.widget.MotionLayout>
