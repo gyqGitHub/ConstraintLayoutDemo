@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    app:defaultDuration="3000"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint android:id="@+id/tv_name">
+            <Layout app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></Layout>
+
+            <CustomAttribute
+                app:attributeName="textColor"
+                app:customColorValue="@color/colorAccent" />
+        </Constraint>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint android:id="@+id/tv_name" >
+            <Layout app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"></Layout>
+
+            <CustomAttribute
+                app:attributeName="textColor"
+                app:customColorValue="@color/colorPrimaryDark" />
+        </Constraint>
+    </ConstraintSet>
+
+    <Transition
+        app:constraintSetEnd="@id/end"
+        app:constraintSetStart="@+id/start">
+
+        <OnClick
+            app:targetId="@id/tv_name"
+            app:clickAction="toggle" />
+
+        <KeyFrameSet>
+            <KeyPosition
+                app:motionTarget="@+id/tv_name"
+                app:keyPositionType="pathRelative"
+                app:percentY="0.1"
+                app:framePosition="50" />
+
+            <KeyAttribute
+                app:framePosition="50"
+                app:motionTarget="@+id/tv_name"
+                android:rotation="360"
+                android:scaleX="2"
+                android:scaleY="2" />
+        </KeyFrameSet>
+
+    </Transition>
+</MotionScene>
