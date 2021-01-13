@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint android:id="@+id/tv_name">
+            <Layout app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></Layout>
+
+            <CustomAttribute
+                app:attributeName="textColor"
+                app:customColorValue="@color/colorAccent" />
+        </Constraint>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint android:id="@+id/tv_name" >
+            <Layout app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"></Layout>
+
+            <CustomAttribute
+                app:attributeName="textColor"
+                app:customColorValue="@color/colorPrimaryDark" />
+        </Constraint>
+    </ConstraintSet>
+
+    <Transition
+        app:constraintSetEnd="@id/end"
+        app:duration="3000"
+        app:motionInterpolator="easeInOut"
+        app:constraintSetStart="@+id/start">
+        <OnClick
+            app:clickAction="toggle"
+            app:targetId="@id/tv_name" />
+
+        <KeyFrameSet>
+            <KeyCycle
+                app:motionTarget="@+id/tv_name"
+                app:framePosition="30"
+                android:translationX="100dp"
+                app:wavePeriod="1"
+                app:waveOffset="0dp"
+                app:waveShape="sin" />
+
+            <KeyCycle
+                app:motionTarget="@+id/tv_name"
+                app:framePosition="70"
+                android:translationX="-100dp"
+                app:wavePeriod="2"
+                app:waveOffset="0dp"
+                app:waveShape="bounce" />
+
+        </KeyFrameSet>
+    </Transition>
+</MotionScene>

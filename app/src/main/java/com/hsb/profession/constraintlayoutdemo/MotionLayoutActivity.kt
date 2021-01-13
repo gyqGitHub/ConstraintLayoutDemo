@@ -29,5 +29,7 @@ class MotionLayoutActivity : AppCompatActivity() {
         btn_keyframe_position.setOnClickListener { MotionKeyFrame1Activity.start(this) }
 
         btn_keyframe_attribute.setOnClickListener { MotionKeyAttributeActivity.start(this) }
+
+        btn_keyframe_cycle.setOnClickListener { MotionKeyCycleActivity.start(this) }
     }
 }
