@@ -1,3 +1,79 @@
 <resources>
     <string name="app_name">ConstraintLayoutDemo</string>
+    <string name="large_text">Arc Motion 材料设计中使用的典型运动类型是圆弧运动。使用MotionLayout创建弧形运动的一种方法是在开始位置和结束位置之间添加正确放置的位置关键帧，如上一节中所述。 在ConstraintLayout 2.0.0 alpha 2中，我们介绍了一种实现完美弧形运动的新方法 - 它更易于使用。你只需要加上 motion:pathMotionArc 属性到起始ConstraintSet，从默认线性运动切换到圆弧运动。 让我们看一个基本的例子，屏幕右下角的起始状态和屏幕顶部中间的结束状态。添加属性足以生成弧形运动：enterAlwaysCollapsed:它是enterAlways的附加值。要使用它，必须三者一起使用；
+
+这里涉及到Child View的高度和最小高度，向下滚动时，
+
+Child View先向下滚动最小高度值，
+
+然后Scrolling View开始滚动，
+
+到达边界时，Child View再向下滚动，直至显示完全。
+
+使用说明：
+
+当ScrollView将要向下滚动的时候，优先将AppBarLayout中的childView滚动到它的最小高度，滚动完成之后scrollview才开始自身的滚动，当scrollview滚动完成时，这个时候childView才会将自己高度完全滚动进入屏幕；
+
+当ScrollView将要向上滚动的时候， 优先将AppBarLayout的childView滚出屏幕，然后ScrollView才开始滚动
+    enterAlwaysCollapsed:它是enterAlways的附加值。要使用它，必须三者一起使用；
+
+这里涉及到Child View的高度和最小高度，向下滚动时，
+
+Child View先向下滚动最小高度值，
+
+然后Scrolling View开始滚动，
+
+到达边界时，Child View再向下滚动，直至显示完全。
+
+使用说明：
+
+当ScrollView将要向下滚动的时候，优先将AppBarLayout中的childView滚动到它的最小高度，滚动完成之后scrollview才开始自身的滚动，当scrollview滚动完成时，这个时候childView才会将自己高度完全滚动进入屏幕；
+
+当ScrollView将要向上滚动的时候， 优先将AppBarLayout的childView滚出屏幕，然后ScrollView才开始滚动
+        enterAlwaysCollapsed:它是enterAlways的附加值。要使用它，必须三者一起使用；
+
+这里涉及到Child View的高度和最小高度，向下滚动时，
+
+Child View先向下滚动最小高度值，
+
+然后Scrolling View开始滚动，
+
+到达边界时，Child View再向下滚动，直至显示完全。
+
+使用说明：
+
+当ScrollView将要向下滚动的时候，优先将AppBarLayout中的childView滚动到它的最小高度，滚动完成之后scrollview才开始自身的滚动，当scrollview滚动完成时，这个时候childView才会将自己高度完全滚动进入屏幕；
+
+当ScrollView将要向上滚动的时候， 优先将AppBarLayout的childView滚出屏幕，然后ScrollView才开始滚动
+        enterAlwaysCollapsed:它是enterAlways的附加值。要使用它，必须三者一起使用；
+
+这里涉及到Child View的高度和最小高度，向下滚动时，
+
+Child View先向下滚动最小高度值，
+
+然后Scrolling View开始滚动，
+
+到达边界时，Child View再向下滚动，直至显示完全。
+
+使用说明：
+
+当ScrollView将要向下滚动的时候，优先将AppBarLayout中的childView滚动到它的最小高度，滚动完成之后scrollview才开始自身的滚动，当scrollview滚动完成时，这个时候childView才会将自己高度完全滚动进入屏幕；
+
+当ScrollView将要向上滚动的时候， 优先将AppBarLayout的childView滚出屏幕，然后ScrollView才开始滚动
+        enterAlwaysCollapsed:它是enterAlways的附加值。要使用它，必须三者一起使用；
+
+这里涉及到Child View的高度和最小高度，向下滚动时，
+
+Child View先向下滚动最小高度值，
+
+然后Scrolling View开始滚动，
+
+到达边界时，Child View再向下滚动，直至显示完全。
+
+使用说明：
+
+当ScrollView将要向下滚动的时候，优先将AppBarLayout中的childView滚动到它的最小高度，滚动完成之后scrollview才开始自身的滚动，当scrollview滚动完成时，这个时候childView才会将自己高度完全滚动进入屏幕；
+
+当ScrollView将要向上滚动的时候， 优先将AppBarLayout的childView滚出屏幕，然后ScrollView才开始滚动
+    </string>
 </resources>
