@@ -37,5 +37,7 @@ class MotionLayoutActivity : AppCompatActivity() {
         btn_coordinator_2.setOnClickListener { MotionCoordinator2Activity.start(this) }
 
         btn_drawerLayout.setOnClickListener { MotionDrawerLayoutActivity.start(this) }
+
+        btn_drawerLayout2.setOnClickListener { MotionDrawerLayout2Activity.start(this) }
     }
 }
