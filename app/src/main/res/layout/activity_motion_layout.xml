@@ -17,7 +17,8 @@
             app:flow_wrapMode="chain"
             app:constraint_referenced_ids="btn_basic_1,btn_basic_2,
             btn_custom_attribute,btn_keyframe_position,btn_keyframe_attribute,
-            btn_keyframe_cycle,btn_coordinator_1,btn_coordinator_2"
+            btn_keyframe_cycle,btn_coordinator_1,btn_coordinator_2,
+            btn_drawerLayout"
             android:layout_height="match_parent" />
 
         <Button
@@ -74,6 +75,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="coordinator_2"
+            />
+
+        <Button
+            android:id="@+id/btn_drawerLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="drawerLayout"
             />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
