@@ -39,5 +39,7 @@ class MotionLayoutActivity : AppCompatActivity() {
         btn_drawerLayout.setOnClickListener { MotionDrawerLayoutActivity.start(this) }
 
         btn_drawerLayout2.setOnClickListener { MotionDrawerLayout2Activity.start(this) }
+
+        btn_sidePanel.setOnClickListener { MotionSidePanelActivity.start(this) }
     }
 }
