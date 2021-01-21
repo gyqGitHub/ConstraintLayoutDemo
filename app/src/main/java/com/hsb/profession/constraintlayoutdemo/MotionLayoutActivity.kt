@@ -43,5 +43,7 @@ class MotionLayoutActivity : AppCompatActivity() {
         btn_sidePanel.setOnClickListener { MotionSidePanelActivity.start(this) }
 
         btn_viewPager.setOnClickListener { MotionViewPagerActivity.start(this) }
+
+        btn_imitate_coordinator.setOnClickListener { MotionComplexImitateCoordinatorActivity.start(this) }
     }
 }
