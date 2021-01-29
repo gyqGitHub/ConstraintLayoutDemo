@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MotionComplexImitateCoordinator2Activity"></activity>
+        <activity android:name=".MotionConstraintHelperActivity"></activity>
+        <activity android:name=".MotionComplexImitateCoordinator2Activity" />
         <activity android:name=".MotionComplexImitateCoordinatorActivity" />
         <activity android:name=".MotionViewPagerActivity" />
         <activity android:name=".MotionSidePanelActivity" />

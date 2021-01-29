@@ -47,5 +47,7 @@ class MotionLayoutActivity : AppCompatActivity() {
         btn_imitate_coordinator.setOnClickListener { MotionComplexImitateCoordinatorActivity.start(this) }
 
         btn_imitate_coordinator2.setOnClickListener { MotionComplexImitateCoordinator2Activity.start(this) }
+
+        btn_helper.setOnClickListener { MotionConstraintHelperActivity.start(this) }
     }
 }
