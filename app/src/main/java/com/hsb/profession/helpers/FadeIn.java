@@ -18,6 +18,7 @@ package com.hsb.profession.helpers;
 
 import android.content.Context;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 
 import androidx.constraintlayout.motion.widget.MotionHelper;
@@ -38,6 +39,7 @@ public class FadeIn extends MotionHelper {
 
     @Override
     public void setProgress(View view, float progress) {
+        Log.e("gyq", "progress = " + progress);
         view.setAlpha(progress);
     }
 }
