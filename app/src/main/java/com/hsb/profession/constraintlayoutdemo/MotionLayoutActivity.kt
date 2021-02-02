@@ -51,5 +51,7 @@ class MotionLayoutActivity : AppCompatActivity() {
         btn_helper.setOnClickListener { MotionConstraintHelperActivity.start(this) }
 
         btn_fragment.setOnClickListener { MotionFragmentActivity.start(this) }
+
+        btn_youtube.setOnClickListener { YoutubeDemoActivity.start(this) }
     }
 }

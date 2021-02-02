@@ -20,7 +20,7 @@
             btn_keyframe_cycle,btn_coordinator_1,btn_coordinator_2,
             btn_drawerLayout,btn_drawerLayout2,btn_sidePanel,btn_viewPager,
             btn_imitate_coordinator,btn_imitate_coordinator2,btn_helper,
-            btn_fragment"
+            btn_fragment,btn_youtube"
             android:layout_height="match_parent" />
 
         <Button
@@ -133,6 +133,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="fragment"
+            />
+
+        <Button
+            android:id="@+id/btn_youtube"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="youtube"
             />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
