@@ -55,5 +55,7 @@ class MotionLayoutActivity : AppCompatActivity() {
         btn_youtube.setOnClickListener { YoutubeDemoActivity.start(this) }
 
         btn_keyTrigger.setOnClickListener { MotionKeyTriggerActivity.start(this) }
+
+        btn_transition.setOnClickListener { MotionTransitionActivity.start(this) }
     }
 }

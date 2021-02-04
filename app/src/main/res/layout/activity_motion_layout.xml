@@ -9,6 +9,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
+        android:layout_marginBottom="30dp"
         android:layout_height="match_parent">
 
         <androidx.constraintlayout.helper.widget.Flow
@@ -20,7 +21,7 @@
             btn_keyframe_cycle,btn_coordinator_1,btn_coordinator_2,
             btn_drawerLayout,btn_drawerLayout2,btn_sidePanel,btn_viewPager,
             btn_imitate_coordinator,btn_imitate_coordinator2,btn_helper,
-            btn_fragment,btn_youtube,btn_keyTrigger"
+            btn_fragment,btn_youtube,btn_keyTrigger,btn_transition"
             android:layout_height="match_parent" />
 
         <Button
@@ -147,6 +148,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="keyTrigger"
+            />
+
+        <Button
+            android:id="@+id/btn_transition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="transition"
             />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
