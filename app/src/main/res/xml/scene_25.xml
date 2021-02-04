@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@+id/start"
+        motion:duration="250"
+        motion:motionInterpolator="linear">
+
+        <OnSwipe
+            motion:dragDirection="dragUp"
+            motion:touchAnchorId="@+id/motionLayout"
+            motion:touchAnchorSide="bottom" />
+
+        <KeyFrameSet>
+            <!--
+            当关键帧位置在增加到10%左右时，调用FloatingActionButton.show()
+            onCross/onNegativeCross/onPositiveCross属性对应的是motionTarget的public方法
+            onCross 不管正向还是反向都会触发，而onNegativeCross只会反向的时候触发，onPositiveCross只会正向的时候触发
+
+            目前这个版本调用public方法不稳定，出现只调用一次的情况  https://github.com/android/views-widgets-samples
+            //motionLayout.addTransitionListener中方法的回调是稳定触发的
+            尝试了手动在这个回调中做业务逻辑的处理，但还是只调用一次。。。。。
+            -->
+            <KeyTrigger
+                motion:framePosition="20"
+                motion:motionTarget="@id/fab"
+                />
+
+<!--            <KeyTrigger-->
+<!--                motion:framePosition="20"-->
+<!--                motion:motionTarget="@id/fab"-->
+<!--                motion:onNegativeCross="show"-->
+<!--                />-->
+
+            <!--
+            当关键帧位置在降至20%左右时，调用FloatingActionButton.hide()
+            -->
+            <KeyTrigger
+                motion:framePosition="80"
+                motion:motionTarget="@id/fab"
+                 />
+
+<!--            <KeyTrigger-->
+<!--                motion:framePosition="80"-->
+<!--                motion:motionTarget="@id/fab"-->
+<!--                motion:onPositiveCross="hide" />-->
+        </KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@id/motionLayout"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            motion:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@id/scrollable"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toBottomOf="@+id/motionLayout" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@id/motionLayout"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:motionProgress="1" />
+
+        <Constraint
+            android:id="@id/scrollable"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toBottomOf="@+id/motionLayout" />
+    </ConstraintSet>
+</MotionScene>
